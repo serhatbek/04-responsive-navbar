@@ -6,25 +6,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header>
-    <div class="container">
+    <div class="container flexCenter">
       <div class="logo">
         <a href="./index.html">serhat<span>bek</span></a>
       </div>
 
+      <div class="burgerMenu active">
+        <div class="burgerMenu__top"></div>
+        <div class="burgerMenu__middle"></div>
+        <div class="burgerMenu__bottom"></div>
+      </div>
+
       <nav>
-        <ul>
-          <li>About</li>
-          <li>Services</li>
-          <li>Contact</li>
-          <li>Blog</li>
+        <ul class="navmenu flexCenter">
+          <li class="navmenu__item"><a class="navmenu__link" href="#">About</a></li>
+          <li class="navmenu__item"><a class="navmenu__link" href="#">Services</a></li>
+          <li class="navmenu__item"><a class="navmenu__link" href="#">Contact</a></li>
+          <li class="navmenu__item"><a class="navmenu__link" href="#">Blog</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
+  <section>
+    <div class="container flexCenter">
+      <h1>Water is the driving force of all nature</h1>
+      <p>Leonardo da Vinci</p>
+    </div>
+  </section>
+
+  <script src="./app.js"></script>
 </body>
 
 </html>

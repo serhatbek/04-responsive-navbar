@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.6rem;
+  color: aliceblue;
+  background-color: #181818;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  justify-content: space-between;
+}
+
+header {
+  height: 8rem;
+  background-color: #1d2321;
+}
+
+header .container {
+  height: 100%;
+}
+
+header .logo a {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+header .logo span {
+  color: #b28a71;
+}
+
+.navmenu__item {
+  display: inline-block;
+  padding: 1rem 2rem;
+}
+
+.navmenu__link {
+  font-size: 2rem;
+  position: relative;
+}
+
+.navmenu__link::after {
+  content: '';
+  width: 0;
+  height: 0;
+  background-color: aliceblue;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 300ms ease-in-out;
+}
+
+.navmenu__link:hover:after {
+  width: 100%;
+  height: 0.2rem;
+}
+
+section {
+  background-image: url(./shore.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 8rem);
+}
+
+section .container {
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+section h1 {
+  font-size: 10.4rem;
+  font-weight: 700;
+  text-shadow: 10px 12px 22px rgba(0, 0, 0, 0.9);
+}
+
+section p {
+  font-size: 3rem;
+  text-shadow: 10px 12px 22px rgba(0, 0, 0, 0.9);
+}
+
+.burgerMenu {
+  width: 3rem;
+  height: 2rem;
+  position: relative;
+  /* display: none; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.burgerMenu__middle,
+.burgerMenu__top,
+.burgerMenu__bottom {
+  width: 100%;
+  height: 4px;
+  background-color: aliceblue;
+  transition: all 300ms ease-in-out;
+}
+
+.burgerMenu.active .burgerMenu__middle {
+  width: 0;
+  opacity: 0;
+}
+
+.burgerMenu.active .burgerMenu__top {
+  transform: rotate(35deg);
+  transform-origin: left;
+}
+
+.burgerMenu.active .burgerMenu__bottom {
+  transform: rotate(326deg);
+  transform-origin: left;
+}
+
+@media (max-width: 680px) {
+  .burgerMenu {
+    display: flex;
+  }
+}
